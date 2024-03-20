@@ -1,0 +1,33 @@
+ARG NODE_IMAGE=node:21.6.2-alpine
+
+
+FROM $NODE_IMAGE as build
+
+WORKDIR /app
+
+COPY package*.json .
+
+RUN npm i
+
+COPY . .
+
+RUN rm .env*
+
+COPY .env .env
+
+RUN sed -i 's/NODE_ENV=development/NODE_ENV=production/g' .env
+
+RUN npm run build
+
+
+FROM $NODE_IMAGE
+
+WORKDIR /app
+
+COPY --from=build /app/.output .
+
+COPY --from=build /app/.env .
+
+EXPOSE 3000
+
+CMD [ "node", "server/index.mjs" ]

@@ -1,0 +1,17 @@
+FROM node:21.6.2-alpine
+
+WORKDIR /app
+
+EXPOSE 3000
+
+COPY package*.json .
+
+RUN npm i
+
+COPY . .
+
+RUN rm .env*
+
+COPY .env .env
+
+CMD [ "npm", "run", "dev" ]

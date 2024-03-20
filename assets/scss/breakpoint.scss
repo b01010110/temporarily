@@ -1,0 +1,7 @@
+@import 'vuetify/lib/styles/settings/_variables.scss';
+
+@mixin breakpoint($breakpoint) {
+  @media #{map-get($display-breakpoints, $breakpoint)} {
+    @content;
+  }
+}

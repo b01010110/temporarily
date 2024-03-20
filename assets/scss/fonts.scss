@@ -1,0 +1,98 @@
+@mixin font-normal {
+  line-height: 100%;
+  font-weight: normal;
+  letter-spacing: initial;
+}
+
+@mixin text {
+  @include font-normal;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 110%;
+}
+
+@mixin form__text--lg {
+  @include font-normal;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+}
+
+@mixin form__text--md {
+  @include font-normal;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+}
+
+@mixin form__text--sm {
+  @include font-normal;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+}
+
+@mixin form__label--lg {
+  @include font-normal;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+}
+
+@mixin form__label--md {
+  @include font-normal;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+}
+
+@mixin form__label--sm {
+  @include font-normal;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+}
+
+@mixin form__button--lg {
+  @include font-normal;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+}
+
+@mixin form__button--md {
+  @include font-normal;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 15px;
+}
+
+@mixin form__button--sm {
+  @include font-normal;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+}
+
+@mixin form__page {
+  @include font-normal;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+}
+
+@mixin menu-header {
+  @include font-normal;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+@mixin menu-mobile {
+  @include font-normal;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@mixin map-title {
+  @include font-normal;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+@mixin map-text {
+  @include font-normal;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
